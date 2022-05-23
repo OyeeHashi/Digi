@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: #fff;
+    color: rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
+    font-family: 'work sans', Arial, sans-serif, sans-serif;
+}
+
+
+.row{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.headerBox{
+    position: absolute;
+    top: 74%;
+    left: 30%;
+    text-align: center;
+}
+header{
+ background-image: linear-gradient(rgba(0,0,0,.3),rgb(0,0,0,.7)),   url(header.jpeg);
+ height: 100vh;
+ background-size: cover;
+ background-position: center;
+ position: relative;
+
+}
+h1{
+    font-size: 500%;
+    font-weight: 300;
+}
+
+h2{
+    font-size: 300%;
+    font-weight: 200;
+}
