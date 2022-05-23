@@ -20,9 +20,11 @@ html,body{
 
 .headerBox{
     position: absolute;
-    top: 74%;
-    left: 30%;
-    text-align: center;
+    top: 50%;
+    left: 50%;
+    text-align: left;
+    margin: 0 auto;
+    transform: translate(-250px,-50px);
 }
 header{
  background-image: linear-gradient(rgba(0,0,0,.3),rgb(0,0,0,.7)),   url(header.jpeg);
@@ -40,4 +42,24 @@ h1{
 h2{
     font-size: 300%;
     font-weight: 200;
+    margin-bottom: 50px;
+}
+
+
+.btn:visited,.btn:link{
+ color: white;
+ text-decoration: none;
+ border-radius: 200px;
+ padding: 10px 20px;
+ margin-top: 50px;
+
+}
+
+.btn-full:visited,.btn-full:link{
+ background-color: #ed07b7;
+ color: #fff;
+}
+
+.btn-full:hover,.btn-full:active{
+    background-color: #fd48d3;
 }
