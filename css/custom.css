@@ -92,8 +92,36 @@ h2{
 .nav li a:visited,.nav li a:link{
   text-decoration: none;
   color: white;
+  transition: border-bottom 0.5s;
  }
 
  .nav li a:hover{
     border-bottom: 2px solid #ed07b7;
+ }
+
+ .about-heading{
+     font-size: 380%;
+     font-weight: 400px;
+     color: black;
+     margin-top: 20px;
+     margin-left: -70px;
+
+ }
+
+ .about{
+     height: 100vh;
+ }
+
+ .about-para{
+     font-size: 140%;
+     font-weight: 100px;
+     text-align: left;
+     color: black;
+     margin-left: -70px;
+ }
+
+ .about img{
+     width: 100%;
+     margin: 70px 70px;
+     border-radius: 10px;
  }
