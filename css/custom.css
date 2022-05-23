@@ -63,3 +63,37 @@ h2{
 .btn-full:hover,.btn-full:active{
     background-color: #fd48d3;
 }
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px 20px;
+    float: left;
+}
+.nav{
+    list-style: none;
+    float: right;
+}
+
+.nav li{
+   display: inline-block;
+   margin: 20px 20px;
+   padding-top: 15px;
+   text-transform: uppercase;
+   margin-bottom: 40px;
+}
+.nav li a{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.nav li a:visited,.nav li a:link{
+  text-decoration: none;
+  color: white;
+ }
+
+ .nav li a:hover{
+    border-bottom: 2px solid #ed07b7;
+ }
