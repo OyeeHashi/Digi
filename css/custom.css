@@ -252,3 +252,69 @@ font-weight: 700%;
 line-height: 150%;
 padding-bottom: 10%;
 }
+
+
+.partner{
+    padding-top: 80px;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.partner-logo{
+    width: 150px;
+    height: 150px;
+border-radius: 50%;
+}
+
+/* Testimonial Section */
+.testimonials{
+    padding-top: 80px;
+    height: 100vh;
+    background-color: white;
+    background-image: url(Testimonial.webp);
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.quote:before{
+    content: "\201C";
+    display: block;
+    font-size: 300%;
+    font-weight: 500%;
+}
+
+.quote{
+    color: white;
+    font-size: 170%;
+    font-style: italic;
+    font-weight: 250%;
+    line-height: 120%;
+    padding-bottom: 20px;
+    margin: 0 auto;
+
+
+}
+
+.cite{
+    color: white;
+    font-size: 120%;
+    font-weight: 250%;
+    line-height: 120%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cite img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.test-box{
+    text-align: left;
+}
+
