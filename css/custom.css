@@ -122,7 +122,7 @@ h2{
  }
 
  .about{
-     height: 100vh;
+     height: 110vh;
  }
 
  .about-para{
@@ -131,7 +131,7 @@ h2{
      text-align: left;
      color: black;
      margin-left: -70px;
-     margin-bottom: 50px;
+     margin-bottom: 10px;
  }
 
  .about img{
@@ -233,7 +233,7 @@ h2{
 
 .services{
     padding-top: 80px;
-    height: 100vh;
+    height: 110vh;
     background-color: white;
 }
 
@@ -383,4 +383,70 @@ border-bottom: 1px solid rgb(233, 233, 233);
  color:#ed07b7;
  margin-right: 10px;
  display: inline-block;
+}
+
+
+footer{
+    margin-top: 10% ;
+    background-color: rgb(49, 49, 49);
+    height: 30vh;
+}
+
+.footer-list{
+    margin: 50px;
+    margin-left: -40px;
+    list-style: none;
+}
+
+.footer-list li{
+    display: inline-block;
+    padding: 5px;
+    
+}
+.footer-list li a{
+text-decoration: none;
+color: whitesmoke;
+font-weight: 300%;
+padding-right:10px;
+}
+.footer-list li a:hover,.footer-list li a:active{
+    font-size: 120%;
+}
+
+.social-list{
+   text-align: right;
+
+}
+
+.footer-list li a i:hover,.footer-list li a i:active{
+    font-size: 200%;
+    transition: color .5s;
+    transition: font-size .2s;
+
+}
+#t:hover, #t:active{
+color: #1DA1F2;
+}
+#f:hover, #f:active{
+color: #4267B2;
+}
+#g:hover, #g:active{
+color: #db4a38;
+}
+#i:hover, #i:active{
+color: #ff00eab9;
+}
+
+.footer-list li a i:visited,.footer-list li a i:link{
+
+    font-size: 100%;
+}
+
+.par{
+text-align: center;
+margin-top: -3%;
+margin-bottom: -50%;
+
+padding: 0 9% 10% -10%;
+color: whitesmoke;
 }
