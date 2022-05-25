@@ -6,7 +6,7 @@
 }
 
 html,body{
-    background-color: #fff;
+    background-color: white;
     color: rgb(255, 255, 255);
     text-rendering: optimizeLegibility;
     font-family: 'work sans', Arial, sans-serif, sans-serif;
@@ -178,7 +178,7 @@ h2{
 .work{
     padding-top: 80px;
     height: 100vh;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(245, 245, 245);
 }
 .work-portfolio{
     list-style: none;
@@ -205,7 +205,7 @@ h2{
     margin: 2px ;
     padding-right: 30px;
     padding-left: 30px;
-    opacity: 0.7;
+    opacity: 0.9;
     overflow: hidden;
 }
 
@@ -234,4 +234,21 @@ h2{
     padding-top: 80px;
     height: 100vh;
     background-color: white;
+}
+
+.readmore{
+    color: #ed07b7;
+    font-weight: 200%;
+    font-size: large;
+    text-decoration: none;
+    margin-top: 300px;
+    padding-top: 300px;
+}
+
+.span_1_of_5  p{
+color: black;
+font-size: 110%;
+font-weight: 700%;
+line-height: 150%;
+padding-bottom: 10%;
 }
