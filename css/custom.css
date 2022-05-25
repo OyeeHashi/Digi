@@ -22,12 +22,12 @@ html,body{
     position: absolute;
     top: 50%;
     left: 50%;
-    text-align: left;
+    
     margin: 0 auto;
     transform: translate(-250px,-50px);
 }
 header{
- background-image: linear-gradient(rgba(0,0,0,.3),rgb(0,0,0,.7)),   url(header.jpeg);
+ background-image: linear-gradient(rgba(0,0,0,.7),rgb(0,0,0,.9)),   url(header.jpeg);
  height: 100vh;
  background-size: cover;
  background-position: center;
@@ -37,6 +37,7 @@ header{
 h1{
     font-size: 500%;
     font-weight: 300;
+    text-align: left;
 }
 
 h2{
@@ -300,7 +301,7 @@ border-radius: 50%;
 .cite{
     color: white;
     font-size: 120%;
-    font-weight: 250%;
+    font-weight: 400%;
     line-height: 120%;
     margin: 0 auto;
     text-align: center;
@@ -318,3 +319,68 @@ border-radius: 50%;
     text-align: left;
 }
 
+
+/* Packages */
+
+.packages{
+    padding-top: 80px;
+    height: 130vh;
+    background-color: white;
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+}
+.box{
+    background-color: rgb(249, 249, 249);
+    padding-bottom: 60px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgb(199, 199, 199);
+}
+.p-head{
+    color: rgb(75, 73, 73);
+    margin-bottom: 10%;
+    margin-left: -30%;
+    margin-top: 20%;
+    padding-bottom: 10px;
+    font-size: 200%;
+    font-weight: 400%;
+
+}
+.package-box{
+border-bottom: 1px solid rgb(233, 233, 233);
+}
+.Package-Price{
+    color: #ed07b7;
+    font-size: 400%;
+    font-weight: 300%;
+
+}
+.Package-Price span{
+    color: #ed07b7;
+    font-size: 25%;
+    font-weight: 150%;
+}
+.package-para,.list-item{
+    margin: 10%;
+    font-size: 120%;
+    font-weight: 400%;
+
+}
+.list{
+ list-style: none;
+
+}
+
+.list-item{
+   
+    font-size: 120%;
+    font-weight: 400%;
+    padding: 3px 0;
+}
+.list-item i{
+ font-size: 130%;
+ font-weight: 700%;
+ color:#ed07b7;
+ margin-right: 10px;
+ display: inline-block;
+}
