@@ -103,6 +103,9 @@ margin: 20px 20px;
 
 }
 
+.about{
+    height: 110vh;
+}
 .section{
     height: -30%;
 }
