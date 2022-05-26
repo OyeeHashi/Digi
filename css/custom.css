@@ -1,4 +1,6 @@
 
+   
+
 *{
     margin: 0;
     padding: 0;
@@ -9,12 +11,15 @@ html,body{
     background-color: white;
     color: rgb(255, 255, 255);
     text-rendering: optimizeLegibility;
-    font-family: 'work sans', Arial, sans-serif, sans-serif;
+    font-family: 'work-sans', Arial, sans-serif, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+
 }
 
 
 .row{
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -27,7 +32,7 @@ html,body{
     transform: translate(-250px,-50px);
 }
 header{
- background-image: linear-gradient(rgba(0,0,0,.7),rgb(0,0,0,.9)),   url(header.jpeg);
+ background-image: linear-gradient(rgba(0,0,0,.7),rgb(0,0,0,.9)),  url(header.jpeg);
  height: 100vh;
  background-size: cover;
  background-position: center;
@@ -137,7 +142,7 @@ h2{
  .about img{
      width: 100%;
      margin: 70px 70px;
-     border-radius: 10px;
+     border-radius: 20%;
      padding-top: 20%;
 
  }
@@ -189,9 +194,10 @@ h2{
 }
 
 .work-portfolio li{
-    display: block;
-    width: 20%;
-    float: left;
+    /* display: block; */
+    width: 100%;
+    /* float: left; */
+    height: auto;
     overflow: hidden;
     text-align: center;
 
@@ -265,7 +271,7 @@ padding-bottom: 10%;
 .partner-logo{
     width: 150px;
     height: 150px;
-border-radius: 50%;
+    border-radius: 50%;
 }
 
 /* Testimonial Section */

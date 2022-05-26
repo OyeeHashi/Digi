@@ -1,0 +1,224 @@
+
+@media screen and (max-width:1230px){
+ .about-sec{
+     padding-left: 150px;
+     padding-right: 150px;
+ }
+ .about img{
+margin-left: -200px;
+
+ }
+
+ .work{
+     padding-top: 40px;
+     height: 80vh;
+ }
+
+ .services .serv{
+     display: block;
+     float: left;
+     margin: 0px 30px;
+ }
+ .services{
+     height: 80vh;
+     padding-bottom: -80px;
+ }
+
+
+ .testimonials .test{
+     margin: 0px 30px;
+}
+
+.footer-list{
+margin: 20px 20px;
+}
+
+.par{
+    margin-top: 30px;
+}
+
+}
+
+@media screen and (max-width:1020px){
+.headerBox {
+    font-size: 10px;
+}
+
+.about{
+    margin-bottom: 0px;
+}
+
+.footer-list{
+    padding-left: 20px;
+    text-align: center;
+
+    }
+}
+
+@media screen and (max-width:840px){
+.about-heading{
+    font-size: 40px ;
+}
+.about-para{
+    font-size: 20px ;
+
+}
+.about{
+    margin-bottom: -20%;
+}
+.serv p{
+    font-size: 14px;
+
+}
+.serv img{
+    padding-bottom: 20px;
+}
+.services{
+    margin-bottom: -5%;
+}
+
+.testimonials{
+    margin-top: -10%;
+    height: 120%;
+}
+.quote{
+    font-size: 20px;
+    font-weight: 200%;
+}
+
+.cite img{
+    width: 40px;
+    height: 40px;
+}
+.footer-list{
+    text-align: center;
+    }
+}
+
+@media screen and (max-width:625px){
+
+.about-heading{
+    font-size: 30px ;
+    margin-left: -100px;
+
+}
+
+.section{
+    height: -30%;
+}
+.about-para{
+    font-size: 15px ;
+    padding: 0px;
+    margin-left: -100px;
+}
+.a.btn.btn-ghost{
+    font-size: 10px;
+    margin-left: -200px;
+    padding-right: 100px;
+}
+
+.about img{
+
+width: 294px;
+height: 238px;
+margin-right: 200px;
+margin-left: 0px;
+padding: 0px;
+margin-top: 130px;
+}
+
+.readmore{
+    font-size: 15px;
+  
+}
+.partner-logo{
+    width: 100px;
+    height: 100px; 
+}
+
+.testimonials .test{
+    font-size: 10px;
+}
+
+p.par{
+    margin-top: -3%;
+}
+
+ul.footer-list{
+    font-size: 14px;
+}
+
+p.package-para{
+    font-size: 15px;
+}
+
+}
+
+@media screen and (max-width:480px){
+    .headerBox{
+        margin-left: 60px;
+    }
+a.btn.btn-full{
+    margin-top: -20px;
+}
+.about-img{
+    text-align: center;
+    padding-left: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+.work{
+    margin-top: 200px;
+    height: 180vh;
+}
+
+.work-portfolio img{
+    width: 80px;
+    height: 80px;
+}
+.work-portfolio li img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding-bottom: -20px;
+    margin: 50px;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.serv img{
+    width: 20%;
+    text-align: center;
+    margin-left: 150px;
+}
+
+.readmore{
+    text-align: center;
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+
+.services{
+    margin-bottom: 600px;
+}
+.partner{
+    height: 120vh;
+}
+
+.feat{
+    font-size: 10px;
+}
+.quote:before{
+    margin-top: 40px;
+}
+
+.p.Package-Price{
+    font-size: 25px;
+}
+ul.list{
+    margin-bottom: 40px;
+}
+}
+
+
+
