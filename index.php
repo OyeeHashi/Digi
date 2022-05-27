@@ -1,3 +1,15 @@
+
+<?php
+session_start();
+
+include('connection.php');
+include('functions.php');
+
+$user_data= check_login($con);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -28,11 +40,21 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                <?php  if(!$user_data) {?>
+                <li><a href="user.php">Sign Up / Login</a></li>
+                <?php } ?>
+                <script>
+                    if($user_data){
+                </script>
+                        <li> Welcome, <?php echo $user_data['user_name'] ?> </li>
+                        <li class="logout"><a href="logout.php">Logout</a></li>
+                <script>}</script>
+                    
             </ul>
         </nav>
 
     </div>
-    <div class="headerBox"  >
+    <div class="headerBox" >
         <h1>Digi Softwares</h1><br>
         <h2>All Solutions Available</h2> <br><br>
         <div>
@@ -183,7 +205,7 @@
     <section class="testimonials">
 
         <div class="row">
-            <h2 class="sec-heading" style="color: white;">Tesimonials</h2>
+            <h2 class="sec-heading" style="color: white;">Testimonials</h2>
             <h3 class="sec-sub-heading" style="color: white;">Our Happy Customers!</h3>
         </div>
 
