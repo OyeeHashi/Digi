@@ -6,9 +6,9 @@ include('functions.php');
 
 $user_data= check_login($con);
 
-$title='Business';
+$title='Personal Development';
 
-$sql= "SELECT * FROM `sheet1` WHERE `Main Category`= 'Business' "  ;
+$sql= "SELECT * FROM `sheet1` WHERE `Main Category` = 'Personal Development'"  ;
 $result= mysqli_query($con,$sql);
 $row=mysqli_fetch_assoc($result);
 
@@ -65,9 +65,7 @@ $row=mysqli_fetch_assoc($result);
     </header>
     <div id='line'>
                         
-        </div>
-
-
+                        </div>
 <?php  
                           if(mysqli_num_rows($result) > 0)  
                           {  
@@ -78,7 +76,7 @@ $row=mysqli_fetch_assoc($result);
 <div class="row">
 
             <div class="row col span_1_of_4 " style="text-align:right ;">
-                <img src="css/finance.png" alt="finance" class="courseimg">
+                <img src="css/development.png" alt="development" class="courseimg">
             </div>
 
 

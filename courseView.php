@@ -23,10 +23,13 @@ $row = mysqli_fetch_assoc($result);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body {
             width: 100%;
@@ -38,42 +41,40 @@ $row = mysqli_fetch_assoc($result);
 
 </head>
 
-<body>
+<body >
 
     <header class="courseheader">
-        <div>
-            <nav>
-                <a href="#"><img src="css/logo.jpg" alt="Technical Logo" class="logo"></a>
-                <ul class="nav">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+        <div >
+            <nav >
+                <a href="#"><img  src="css/logo.jpg" alt="Technical Logo" class="logo" ></a>
+                <ul id='akm' class="nav" >
+                    <li><a style="font-weight:600;" href="index.php">Home</a></li>
+                    <li><a style="font-weight:600;" href="#about">About</a></li>
+                    <li><a style="font-weight:600;" href="addForm.php">Request Course</a></li>
                     <?php if (!$user_data) { ?>
                         <li><a href="user.php">Sign Up / Login</a></li>
                     <?php } ?>
                     <script>
                         if ($user_data) {
                     </script>
-                    <li> Welcome, <?php echo $user_data['user_name'] ?> </li>
-                    <li class="logout"><a href="logout.php">Logout</a></li>
+                    <li style="color: #ed07b7c2; font-weight:600;">| Welcome, <?php echo $user_data['user_name'] ?> </li>
+                    <li class="logout"><a style="color: #db4a39; font-weight:700;" href="logout.php">Logout</a></li>
                     <script>
                         }
                     </script>
 
                 </ul>
             </nav>
-
+                        
         </div>
 
-        <div class="headerBox">
-
-            <h1 style="font-size: 30px; font-weight: 300%; margin-top:40px auto; margin-right: 20%;left: 80px; color:whitesmoke; position: absolute; top:-80px; z-index:0">
-                <?php echo $row['Name'] ?></h1>
-
-        </div>
-
+        
+      
 
     </header>
+    <div id='line'>
+                        
+        </div>
 
     <?php
 
@@ -95,43 +96,51 @@ $row = mysqli_fetch_assoc($result);
 
     <section class=" course " style="margin-bottom: 150%;">
 
+    <div class="about-sec" >
+    <div class="heading">
+            <?php
+            echo '|&nbsp'.$name;
+            ?>
     
-    <div class="about-sec " >
-    
+    </div>
+
+
+
     <div style="text-align:center ;" >
-        <img style="text-align:center; margin: 10px auto" src="css/development.png" alt="development" class="courseimg" width="450px" height="450px">
+        <img style="text-align:center; margin: 10px auto; box-shadow: 2px 2px;" src="css/development.png" alt="development" class="courseimg" width="450px" height="450px">
     </div>
                 
                 <div>
-                    <img style="margin: 10px 20px 80px" src="<?php echo $picpath ?>" alt="Picture">
+                    <img style="margin: 10px 20px 80px; border: 2px solid whitesmoke ; text-align:center;" src="<?php echo $picpath ?>" alt="Picture" width="80%" height=
+                    "80%">
                 </div>
                 <div style="margin: 10px 70px 80px">
-                    <ul id="alpha">
+                    <ul id='alpha'>
                         <li>
-                            <h2> Name: </h2> <?php echo $name ?>
+                            <h2> | Name: </h2> <?php echo $name ?>
                         </li>
                         <li>
-                            <h2>Major Category: </h2><?php echo $m_cat ?>
+                            <h2>| Major Category: </h2><?php echo $m_cat ?>
                         <li>
-                            <h2>Sub Category: </h2><?php echo $s_cat ?>
+                            <h2>| Sub Category: </h2><?php echo $s_cat ?>
                         <li>
-                            <h2>Sub Topic: </h2><?php echo $s_topic ?>
+                            <h2>| Sub Topic: </h2><?php echo $s_topic ?>
                         <li>
-                            <h2>Website: </h2> <?php echo $website ?>
+                            <h2>| Website: </h2> <?php echo $website ?>
                         <li>
-                            <h2>Instructor: </h2><?php echo $instructor ?>
+                            <h2>| Instructor: </h2><?php echo $instructor ?>
                         <li>
-                            <h2>Hours: </h2><?php echo $hours ?>
+                            <h2>| Hours: </h2><?php echo $hours ?>
                         <li>
-                            <h2>Rating: </h2><?php echo $rating ?>
+                            <h2>| Rating: </h2><?php echo $rating ?>
                         <li>
-                            <h2>Students Enrolled:</h2> <?php echo $Students ?>
+                            <h2>| Students Enrolled:</h2> <?php echo $Students ?>
                         <li>
-                            <h2>Availibility </h2> <?php echo $availibility ?>
+                            <h2>| Availibility </h2> <?php echo $availibility ?>
                         <li>
-                            <h2>Status </h2> <?php echo $status ?>
+                            <h2>| Status </h2> <?php echo $status ?>
                         <li>
-                            <h2>Link </h2> 
+                            <h2>| Link </h2> 
 
                     </ul>
 
@@ -148,5 +157,33 @@ $row = mysqli_fetch_assoc($result);
     </section>
 
 </body>
-
+<footer id="contact">
+        <div class="row">
+            <div class="col span_1_of_2">
+                <ul class="footer-list">
+                    <li><a class="a" href="#">About Us</a></li>
+                    <li><a class="a" href="#">Contact Us</a></li>
+                    <li><a class="a" href="#">Help and Support</a></li>
+                    <li><a class="a" href="#">IOS</a></li>
+                    <li><a class="a" href="#">Android</a></li>
+                </ul>
+            </div>
+    
+            <div class="col span_1_of_2 social">
+                <ul class="footer-list " style="text-align: right;">
+                <li><a class="a" href="#"><i id="f" class="fa-brands fa-facebook"></i></a></li>
+                <li><a class="a" href="#"><i id="g" class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a class="a" href="#"><i id="t" class="fa-brands fa-twitter"></i></a></li>
+                <li><a class="a" href="#"><i id="i" class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+    
+        </div>
+        <div class="col span_2_of_2">
+            <p class="par">A website project keeping in mind of the HCI concepts for better structure.
+                <br><br> © All RIGHTS RESERVED BY Hashii </p>
+        </div>
+    
+        
+    </footer>
 </html>

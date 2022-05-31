@@ -5,7 +5,12 @@ session_start();
 include('connection.php');
 include('functions.php');
 
-$user_data= check_login($con);
+ $user_data= check_login($con);
+
+ $sql= "SELECT * FROM `testimonials` "  ;
+ $result= mysqli_query($con,$sql);
+ $row=mysqli_fetch_assoc($result);
+
 
 ?>
 
@@ -34,25 +39,29 @@ $user_data= check_login($con);
     <link rel="stylesheet" type="text/css" href="css/media-queries.css">
 
 </head>
-<header > 
+<header id='index'> 
     <div >
         <nav>
             <a href="#"><img src="css/logo.jpg" alt="Technical Logo" class="logo"></a>
+          
             <ul class="nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
+                <?php  if($user_data) {?> 
+                <li><a href="courses.php">Courses</a></li>
+                <?php } ?>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <?php  if(!$user_data) {?>
                 <li><a href="user.php">Sign Up / Login</a></li>
                 <?php } ?>
-                <script>
-                    if($user_data){
-                </script>
-                        <li> Welcome, <?php echo $user_data['user_name'] ?> </li>
-                        <li class="logout"><a href="logout.php">Logout</a></li>
-                <script>}</script>
+                <?php  if($user_data) {?> 
+                <li ><img style="border-radius: 50%; background-color:white; margin-top:-30%" src="img/user.svg" alt="user" width="40px" height="40px"></li>
+                <li id='user' style=" margin-left: 20px;font-weight:1000; color:black">| <?php echo $user_data['user_name']?> </li>
+                <li><a style="margin-top:-17%;" href="logout.php" class="btn btn-full"> Logout</a></li> 
+                <?php } ?>
                     
             </ul>
+            
         </nav>
 
     </div>
@@ -60,7 +69,7 @@ $user_data= check_login($con);
         <h1 >Digi Softwares</h1><br>
         <h2 >All Solutions Available</h2> <br><br>
         <div>
-            <a href="#" class="btn btn-full"> ACCESS SOLUTIONS</a>
+            <a href="courses.php" class="btn btn-full"> ACCESS SOLUTIONS</a>
         </div>
     </div>
 
@@ -103,7 +112,7 @@ $user_data= check_login($con);
             <div class="col span_1_of_5 check" style="background-color: white;"><img src="css/laptop.svg" alt="key"
                     width="50%">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <div><a href="#" target="_blank" class="readmore">READ MORE</a></div>
+                <div><a href="services.php" target="_blank" class="readmore">READ MORE</a></div>
             </div>
             <div class="col span_1_of_5 check" style="background-color: white;"><img src="css/curve.svg" alt="key"
                     width="50%">
@@ -189,16 +198,27 @@ $user_data= check_login($con);
             <h2 class="sec-heading" style="color: white;">Testimonials</h2>
             <h3 class="sec-sub-heading" style="color: white;">Our Happy Customers!</h3>
         </div>
-
         <div class="row test">
+        <?php  
+        if(mysqli_num_rows($result) > 0)  
+                          {  
+                               while($row = mysqli_fetch_array($result))  
+                               {  
+                          ?>  
+
             <div class="col span_1_of_3 test-box">
                 <blockquote class="quote">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis totam,commodi
-                    optio officiis laborum, quae voluptatu.
+                    <?php echo $row['review']?>
                 </blockquote>
-                <cite class="cite"> <img src="css/cust-1.jpg" alt="customer"> Husnain Jabbar </cite>
+                <cite class="cite"> <img src="<?php echo $row['img']?>" alt="customer"> <?php echo $row['name']?> </cite>
             </div>
-            <div class="col span_1_of_3 test-box">
+
+            <?php
+                               }
+        }?>
+
+
+            <!-- <div class="col span_1_of_3 test-box">
                 <blockquote class="quote">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis totam,commodi
                     optio officiis laborum, quae voluptatu.
@@ -212,7 +232,7 @@ $user_data= check_login($con);
                 </blockquote>
                 <cite class="cite"> <img src="css/cust-3.jpg" alt="customer"> Juice Peelo Pagal!
                 </cite>
-            </div>
+            </div> -->
 
         </div>
 
@@ -256,8 +276,8 @@ $user_data= check_login($con);
 
             <div class="col span_1_of_3 box">
                 <div class="package-box">
-                    <h4 class="p-head">Starter</h4>
-                    <p class="Package-Price">$69 <span>3 Months</span></p>
+                    <h4 class="p-head">Rookie</h4>
+                    <p class="Package-Price">$79 <span>3 Months</span></p>
                     <p class="package-para">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Eligendi explicabo magnam repellendus nobis natus fugit vel amet.
@@ -267,7 +287,8 @@ $user_data= check_login($con);
                     <ul class="list">
                         <li class="list-item"><i class="fa-solid fa-check"></i>SEO</li>
                         <li class="list-item"><i class="fa-solid fa-check"></i>Blogs</li>
-                        <li class="list-item"><i class="fa-solid fa-check"></i>Bugs</li>
+                    
+                        <li class="list-item"><i class="fa-solid fa-check"></i>3 Courses</li>
                     </ul>
                 </div>
                 <div>
@@ -277,8 +298,8 @@ $user_data= check_login($con);
             </div>
             <div class="col span_1_of_3 box">
                 <div class="package-box">
-                    <h4 class="p-head">Starter</h4>
-                    <p class="Package-Price">$69 <span>3 Months</span></p>
+                    <h4 class="p-head">Premium</h4>
+                    <p class="Package-Price">$99 <span>3 Months</span></p>
                     <p class="package-para">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Eligendi explicabo magnam repellendus nobis natus fugit vel amet.
@@ -288,7 +309,7 @@ $user_data= check_login($con);
                     <ul class="list">
                         <li class="list-item"><i class="fa-solid fa-check"></i>SEO</li>
                         <li class="list-item"><i class="fa-solid fa-check"></i>Blogs</li>
-                        <li class="list-item"><i class="fa-solid fa-check"></i>Bugs</li>
+                        <li class="list-item"><i class="fa-solid fa-check"></i>Courses</li>
                     </ul>
                 </div>
                 <div>
@@ -303,8 +324,8 @@ $user_data= check_login($con);
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
     <br><br><br><br>
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">We'd Love to Hear From You !</div>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900" style="font-weight: 500;">Contact Us</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base" style="font-size: 120%;">We'd Love to Hear From You !</div>
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
       <div class="flex flex-wrap -m-2">
         <div class="p-2 w-1/2">
@@ -394,33 +415,26 @@ $user_data= check_login($con);
         
     </footer>
         <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
-        
+        <script>
+         $('nav .button').click(function(){
+           $('nav .button span').toggleClass("rotate");
+         });
+           $('nav ul li .first').click(function(){
+             $('nav ul li .first span').toggleClass("rotate");
+           });
+           $('nav ul li .second').click(function(){
+             $('nav ul li .second span').toggleClass("rotate");
+           });
+      </script>
         <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/query.js"></script>
-</body>
 
-<section class="work">
-        <h2 class="sec-heading">WORK</h2>
-        <h3 class="sec-sub-heading">Completed Projects</h3>
-        <ul class="work-portfolio">
-            <div class="col span_1_of_4">
-            <li><img src="css/cus-1.jpg" alt="portfolio"></li>
-            </div>
-            <div class="col span_1_of_4">
-            <li><img src="css/cus-2.jpg" alt="portfolio"></li>
-            </div>
-            <div class="col span_1_of_4">
-            <li><img src="css/cus-3.jpg" alt="portfolio"></li>
-            </div>
-            <div class="col span_1_of_4">
-            <li><img src="css/cus-4.jpg" alt="portfolio"></li>
-            </div>
-            
-            <div class="clear-fix"></div>
-        </ul>
-    </section>
-    
 
-</html>
+        </body>
+
+
+
+        </html>
+

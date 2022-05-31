@@ -11,8 +11,9 @@ html,body{
     background-color: white;
     color: rgb(255, 255, 255);
     text-rendering: optimizeLegibility;
-    font-family: 'work-sans', Arial, sans-serif, sans-serif;
+    font-family:  'work sans';
     overflow-x: hidden;
+
     width: 100%;
 
 
@@ -31,22 +32,55 @@ html,body{
     position: absolute;
     top: 20%;
     left: 7%;
+    font-size: 110%;
+    font-weight: 800;
+    color: black;
+ 
     /* top: 50%;
     left: 50%;
-    margin: 0 auto;
-    transform: translate(-250px,-50px); */
+    margin: 0 auto;*/
+    transform: translateX(-50px);
+}
+
+
+.headerBox h2{
+    font-weight: 500;
+}
+.headerBox h1{
+    font-weight: 600;
 }
 header{
- background-image: linear-gradient(rgba(0,0,0,.8),rgb(0,0,0,.3)),  url(undraw.svg);
+ /* background-image: url(undraw.svg); */
+ 
+ height: 100vh;
+ /* background-size: cover; */
+ /* position: relative; */
+ /* background-repeat: no-repeat; */
+ /* background-position: right; 
+ background-attachment: fixed;
+ background-size:50%;*/
+}
+
+
+#index{
+ background-image: url(undraw.svg);
+ 
  height: 100vh;
  /* background-size: cover; */
  background-position: right;
  /* position: relative; */
  background-repeat: no-repeat;
  background-attachment: fixed;
+ background-size:50%;
+}
+
+#back{
+    background-image:linear-gradient(27deg, rgba(38,38,38,1) 23%, rgba(0,212,255,1) 53%, rgba(2,0,36,1) 100%), url(undraw.svg);
+    height:50vh;
+    
 }
 .courseheader{
- background-image: linear-gradient(rgba(0,0,0,.8),rgb(0,0,0,.3)),  url(undraw.svg);
+ background-image: url(undraw.svg);
  height: 50vh;
  /* background-size: cover; */
  background-position: right;
@@ -54,7 +88,16 @@ header{
  background-repeat: no-repeat;
  background-attachment: fixed;
 }
+/* .navbar{
+ background-color: rgb(53, 47, 47);
+}
+.navbar-img{
+    margin-bottom: 4px;
+    width:50px;
+     height:50px;
+    border-radius: 50%;
 
+} */
 h1{
     font-size: 450%;
     font-weight: 300;
@@ -76,6 +119,7 @@ h2{
  border-radius: 200px;
  padding: 10px 20px;
  margin-top: 50px;
+ font-weight:600;
 
 }
 
@@ -108,6 +152,12 @@ h2{
     margin: 20px 20px;
     float: left;
 }
+
+.logout{
+    color:red
+    border-radius: 12px;
+    margin: 0 10px 10px;
+}
 .nav{
     list-style: none;
     float: right;
@@ -122,13 +172,14 @@ h2{
 }
 .nav li a{
     text-decoration: none;
-    color: white;
+    color: black;
     padding-bottom: 10px;
+    font-weight: 600;
 }
 
 .nav li a:visited,.nav li a:link{
   text-decoration: none;
-  color: white;
+  color: black;
   transition: border-bottom 0.5s;
  }
 
@@ -136,7 +187,7 @@ h2{
     border-bottom: 2px solid #ed07b7;
  }
 
-.sticky-nav{
+.sticky-nav,.navv{
 
     position: fixed;
     top: 0;
@@ -161,7 +212,13 @@ h2{
     font-weight: 400%;
 }
 
+#user{
+    color: white;
+}
 
+.sticky-nav.nav #user{
+    color: black;
+}
 
 
 
@@ -176,6 +233,7 @@ h2{
 
  .about{
      height: 100vh;
+     margin-bottom: -10%;
  }
 
  .about-para{
@@ -206,6 +264,14 @@ h2{
      padding-top: 4%;
      text-align: left;
      margin-top: 0%;
+     
+ }
+ .about-sec-1{
+     padding: 0 5%;
+     padding-top: 4%;
+     text-align: left;
+     margin-top: 0%;
+     
  }
 
 
@@ -296,11 +362,12 @@ h2{
     padding-top: 80px;
     height: 110vh;
     background-color: white;
+    margin-bottom: -10%;
 }
 
 .readmore{
     color: #ed07b7;
-    font-weight: 200%;
+    font-weight: 600;
     font-size: large;
     text-decoration: none;
     margin-top: 300px;
@@ -310,23 +377,29 @@ h2{
 .span_1_of_5  p{
 color: black;
 font-size: 110%;
-font-weight: 700%;
+font-weight: 400;
 line-height: 150%;
 padding-bottom: 10%;
+margin-top: 10%;
+}
+.span_1_of_5  img{
+    margin-left: 10%;
 }
 
 
 .partner{
     padding-top: 80px;
     height: 100vh;
-    background-color: rgb(245, 245, 245);
-    text-align: center;
+    background-color: rgba(190, 190, 190, 0.13);
+
 }
 
 .partner-logo{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    margin-left: 10%;
+
 }
 
 /* Testimonial Section */
@@ -365,7 +438,11 @@ padding-bottom: 10%;
     font-weight: 400%;
     line-height: 120%;
     margin: 0 auto;
-    text-align: center;
+    margin-left: 10px;
+    text-align: right;
+    vertical-align: middle;
+    transform: translate(50px,50px);
+    font-weight: 600;
 }
 
 .cite img{
@@ -373,7 +450,10 @@ padding-bottom: 10%;
     width: 80px;
     height: 80px;
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: -20%;
+    text-align: right;
+    align-items: right;
+
 }
 
 .test-box{
@@ -545,13 +625,23 @@ color: whitesmoke;
 }
 
 
-.course:after{
+/* .course:after{
     display: block;
     height: 2px;
     width: 300px;
     content: "";
     background-color: #ed07b7;
-    margin: 30px auto 40px auto;
+    margin: 5px auto 40px auto;
+
+} */
+
+.course-1:after{
+    display: block;
+    height: 2px;
+    width: 300px;
+    content: "";
+    background-color: #ed07b7;
+    margin: 5px auto 40px auto;
 
 }
 
@@ -600,4 +690,75 @@ color: whitesmoke;
 #alpha li h2{
     font-size: 150%;
     font-weight: 300%;
+}
+
+
+
+
+/* TO be Deleted */
+
+
+#akm{
+     background-color:whitesmoke ;
+     border-radius: 40px ;
+     margin: 20px 50px ;
+     margin-left: 100px;
+    transform: translateX(-380px);
+}
+
+
+#akm li{
+
+    margin: 0 10px ;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+}
+
+#akm li a{
+
+color: rgba(0, 0, 0, 0.747);
+
+}
+
+
+div .heading{
+color: #ed07b7;
+font-size: 250%;
+
+}
+
+
+
+/* .course:before{
+    display: block;
+    content: "";
+    width: 90%;
+    border-bottom: 2px solid #ed07b7;
+    margin: 0 auto;
+
+} */
+
+#line:after{
+    display: block;
+    content: "";
+    width: 90%;
+    border-bottom: 2px solid #ed07b7;
+    margin: 0 auto;
+}
+#linee:after{
+    display: block;
+    content: "";
+    width: 20%;
+    border-bottom: 2px solid #ed07b7;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#alpha li h2{
+
+
+    color: #ed07b7;
 }

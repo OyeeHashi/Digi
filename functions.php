@@ -17,11 +17,11 @@ function check_login($con)
 			return $user_data;
 		}
 	}
-
-	//redirect to login
-	header("Location: user.php");
-	die;
-
+	// redirect to login
+	//header("Location: index.php");
+	//die;
+	
+	
 }
 
 // function random_num($length)

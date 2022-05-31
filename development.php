@@ -6,6 +6,8 @@ include('functions.php');
 
 $user_data= check_login($con);
 
+$title='Development';
+
 $sql= "SELECT * FROM `sheet1` WHERE `Main Category`= 'Development'"  ;
 $result= mysqli_query($con,$sql);
 $row=mysqli_fetch_assoc($result);
@@ -33,38 +35,36 @@ $row=mysqli_fetch_assoc($result);
 <body>
 
 <header class="courseheader">
-<div >
-        <nav>
-            <a href="#"><img src="css/logo.jpg" alt="Technical Logo" class="logo"></a>
-            <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <?php  if(!$user_data) {?>
-                <li><a href="user.php">Sign Up / Login</a></li>
-                <?php } ?>
-                <script>
-                    if($user_data){
-                </script>
-                        <li> Welcome, <?php echo $user_data['user_name'] ?> </li>
-                        <li class="logout"><a href="logout.php">Logout</a></li>
-                <script>}</script>
-                    
-            </ul>
-        </nav>
+        <div >
+            <nav >
+                <a href="#"><img  src="css/logo.jpg" alt="Technical Logo" class="logo" ></a>
+                <ul id='akm' class="nav" >
+                    <li><a style="font-weight:600;" href="index.php">Home</a></li>
+                    <li><a style="font-weight:600;" href="#about">About</a></li>
+                    <li><a style="font-weight:600;" href="addForm.php">Request Course</a></li>
+                    <?php if (!$user_data) { ?>
+                        <li><a href="user.php">Sign Up / Login</a></li>
+                    <?php } ?>
+                    <script>
+                        if ($user_data) {
+                    </script>
+                    <li style="color: #ed07b7c2; font-weight:600;">| Welcome, <?php echo $user_data['user_name'] ?> </li>
+                    <li class="logout"><a style="color: #db4a39; font-weight:700;" href="logout.php">Logout</a></li>
+                    <script>
+                        }
+                    </script>
 
-    </div>
-    
-    <div class="headerBox" >
-    
-        <h1 style="font-size: 70px; font-weight: 300%; margin-top:-40%; color:whitesmoke; position: absolute; top:-150px;">
-        <br>Development Courses</h1>
-        
-    </div>
+                </ul>
+            </nav>
 
+        </div>
 
-</header>
+      
 
+    </header>
+    <div id='line'>
+                        
+                        </div>
 
 <?php  
                           if(mysqli_num_rows($result) > 0)  
@@ -80,7 +80,7 @@ $row=mysqli_fetch_assoc($result);
             </div>
 
 
-            <div class="col span_3_of_4 about-sec ">
+            <div class="col span_3_of_4 about-sec-1 ">
                 <h1 class="courseHead" ><?php echo $row["Name"]; ?> </h1>
                 <div class=" coursePara">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
@@ -92,7 +92,9 @@ $row=mysqli_fetch_assoc($result);
             </div>
 
         </div>
-
+        <div id='linee'>
+                        
+          </div>
         <?php
                                }
         }?>

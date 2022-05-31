@@ -26,7 +26,7 @@ $user_data= check_login($con);
 
 <body>
 
-<header>
+<header id='index'>
 <div >
         <nav>
             <a href="#"><img src="css/logo.jpg" alt="Technical Logo" class="logo"></a>
@@ -40,8 +40,8 @@ $user_data= check_login($con);
                 <script>
                     if($user_data){
                 </script>
-                        <li> Welcome, <?php echo $user_data['user_name'] ?> </li>
-                        <li class="logout"><a href="logout.php">Logout</a></li>
+                        <li style=" margin-left: 20px;font-weight:1000; color:black"> Welcome, <?php echo $user_data['user_name'] ?> </li>
+                        <li><a style="margin-top:-17%;" href="logout.php" class="btn btn-full"> Logout</a></li> 
                 <script>}</script>
                     
             </ul>
@@ -50,7 +50,7 @@ $user_data= check_login($con);
     </div>
     <div class="headerBox" >
         <h1 style="font-size: 70px; font-weight: 300%; margin-top:-5%;">
-        <br><img src="css/udemy.png" alt="udemy" width="150px" height="150px" style="border-radius: 50%;   margin-left:100px;">
+                <br><img src="css/udemy.png" alt="udemy" width="150px" height="150px" style="border-radius: 50%;   margin-left:100px; ">
         Paid Courses</h1><br>
         <h2 style="font-size: 30px; font-weight: 300%; ">- Learning Made Accessable</h2> <br><br>
         <div>
@@ -61,7 +61,7 @@ $user_data= check_login($con);
 
 </header>
 
-<section class="course" >
+<section class="course-1" >
 <div class="row">
             <div class="col span_1_of_2 about-sec">
                 <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Development </h1>
@@ -82,7 +82,7 @@ $user_data= check_login($con);
         </div>
 </section>
 
-<section class="  course " >
+<section class="  course-1 " >
 <div class="row">
             <div class="col span_1_of_2 about-sec">
                 <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Business </h1>
@@ -94,7 +94,7 @@ $user_data= check_login($con);
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
                     commodi quae.
                 </p>
-                <br><a href="#" class="btn btn-ghost ">BROWSE COURSES</a>
+                <br><a href="business.php" class="btn btn-ghost ">BROWSE COURSES</a>
             </div>
 
             <div class="row col span_1_of_2 " style="text-align:right ;">
@@ -104,67 +104,7 @@ $user_data= check_login($con);
 </section>
 
 
-<section class="  course" >
-<div class="row">
-            <div class="col span_1_of_2 about-sec">
-                <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Lifesyle </h1>
-                <p class="about-para">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
-                    commodi quae v
-                    elit itaque doloremque quaerat fuga alias sapiente amet est dolore dolor necessitatibus doloribus
-                    sit dolores.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
-                    commodi quae.
-                </p>
-                <br><a href="#" class="btn btn-ghost ">BROWSE COURSES</a>
-            </div>
-
-            <div class="row col span_1_of_2 " style="text-align:right ;">
-                <img src="css/lifestyle.png" alt="development" class="about-img">
-            </div>
-        </div>
-</section>
-<section class="  course" >
-<div class="row">
-            <div class="col span_1_of_2 about-sec">
-                <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Psychology </h1>
-                <p class="about-para">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
-                    commodi quae v
-                    elit itaque doloremque quaerat fuga alias sapiente amet est dolore dolor necessitatibus doloribus
-                    sit dolores.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
-                    commodi quae.
-                </p>
-                <br><a href="#" class="btn btn-ghost ">BROWSE COURSES</a>
-            </div>
-
-            <div class="row col span_1_of_2 " style="text-align:right ;">
-                <img src="css/psychology.png" alt="development" class="about-img">
-            </div>
-        </div>
-</section>
-<section class="  course" >
-<div class="row">
-            <div class="col span_1_of_2 about-sec">
-                <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Teaching </h1>
-                <p class="about-para">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
-                    commodi quae v
-                    elit itaque doloremque quaerat fuga alias sapiente amet est dolore dolor necessitatibus doloribus
-                    sit dolores.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
-                    commodi quae.
-                </p>
-                <br><a href="#" class="btn btn-ghost ">BROWSE COURSES</a>
-            </div>
-
-            <div class="row col span_1_of_2 " style="text-align:right ;">
-                <img src="css/teaching.png" alt="development" class="about-img">
-            </div>
-        </div>
-</section>
-<section class="  course" >
+<section class="  course-1" >
 <div class="row">
             <div class="col span_1_of_2 about-sec">
                 <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Finance </h1>
@@ -176,11 +116,71 @@ $user_data= check_login($con);
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
                     commodi quae.
                 </p>
-                <br><a href="#" class="btn btn-ghost ">BROWSE COURSES</a>
+                <br><a href="finance.php" class="btn btn-ghost ">BROWSE COURSES</a>
             </div>
 
             <div class="row col span_1_of_2 " style="text-align:right ;">
-                <img src="css/finance.png" alt="development" class="about-img">
+                <img src="css/lifestyle.png" alt="development" class="about-img">
+            </div>
+        </div>
+</section>
+<section class="  course-1" >
+<div class="row">
+            <div class="col span_1_of_2 about-sec">
+                <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Office Productivity </h1>
+                <p class="about-para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
+                    commodi quae v
+                    elit itaque doloremque quaerat fuga alias sapiente amet est dolore dolor necessitatibus doloribus
+                    sit dolores.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
+                    commodi quae.
+                </p>
+                <br><a href="OfficeProductivity.php" class="btn btn-ghost ">BROWSE COURSES</a>
+            </div>
+
+            <div class="row col span_1_of_2 " style="text-align:right ;">
+                <img src="css/psychology.png" alt="development" class="about-img">
+            </div>
+        </div>
+</section>
+<section class="course-1" >
+<div class="row">
+            <div class="col span_1_of_2 about-sec">
+                <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Teaching </h1>
+                <p class="about-para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
+                    commodi quae v
+                    elit itaque doloremque quaerat fuga alias sapiente amet est dolore dolor necessitatibus doloribus
+                    sit dolores.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
+                    commodi quae.
+                </p>
+                <br><a href="teaching.php" class="btn btn-ghost ">BROWSE COURSES</a>
+            </div>
+
+            <div class="row col span_1_of_2 " style="text-align:right ;">
+                <img src="css/teaching.png" alt="development" class="about-img">
+            </div>
+        </div>
+</section>
+<section class="  course-1" >
+<div class="row">
+            <div class="col span_1_of_2 about-sec">
+                <h1 class="about-heading" style="font-size: 50px; ">Udemy Courses for Personal Development </h1>
+                <p class="about-para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
+                    commodi quae v
+                    elit itaque doloremque quaerat fuga alias sapiente amet est dolore dolor necessitatibus doloribus
+                    sit dolores.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, ratione harum inventore aliquam
+                    commodi quae.
+                </p>
+                <br><a href="personalDevelopment.php" class="btn btn-ghost ">BROWSE COURSES</a>
+            </div>
+
+            <div class="row col span_1_of_2 " style="text-align:right;">
+                <img src="css/lifestyle.png" alt="development" class="about-img">
             </div>
         </div>
 </section>

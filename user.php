@@ -11,9 +11,9 @@ if(isset($_POST['signup']))
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
 
-		if(!empty($user_name) && !empty($password))
+		if(!empty($_POST['user_name']) && !empty($_POST['password']))
 		{
-			//save to database
+		//	save to database
 			// $user_id = random_num(20);
 			$query = "insert into user_data (email,user_name,password) values ('$email','$user_name','$password')";
 

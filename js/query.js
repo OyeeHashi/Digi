@@ -3,11 +3,12 @@ $(document).ready(function(){
     $(".about").waypoint(function(direction){
        if(direction=="down")
         $("nav").addClass('sticky-nav');
-        else
+
+    else
         $("nav").removeClass('sticky-nav');
-        
     
     });
+    
 
 
     $(".nav a").click(function(e){
