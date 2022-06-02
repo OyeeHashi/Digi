@@ -38,10 +38,11 @@ $row=mysqli_fetch_assoc($result);
         <div >
             <nav >
                 <a href="#"><img  src="css/logo.jpg" alt="Technical Logo" class="logo" ></a>
-                <ul id='akm' class="nav" >
+                <ul id='akm' class="nav" style="transform: translateX(-280px)">
                     <li><a style="font-weight:600;" href="index.php">Home</a></li>
                     <li><a style="font-weight:600;" href="#about">About</a></li>
                     <li><a style="font-weight:600;" href="addForm.php">Request Course</a></li>
+                    <li><a style="font-weight:600;" href="addForm.php">Search</a></li>
                     <?php if (!$user_data) { ?>
                         <li><a href="user.php">Sign Up / Login</a></li>
                     <?php } ?>

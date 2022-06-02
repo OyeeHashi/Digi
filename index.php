@@ -1,5 +1,7 @@
 
 <?php
+
+// Starting a php Connection
 session_start();
 
 include('connection.php');
@@ -7,7 +9,7 @@ include('functions.php');
 
  $user_data= check_login($con);
 
- $sql= "SELECT * FROM `testimonials` "  ;
+ $sql= "SELECT * FROM `testimonials` "  ;    
  $result= mysqli_query($con,$sql);
  $row=mysqli_fetch_assoc($result);
 
@@ -24,7 +26,7 @@ include('functions.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/f9c462df9b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +39,10 @@ include('functions.php');
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/media-queries.css">
-
+    
 </head>
-<header id='index'> 
+<header id='index'>     
+    <!-- contains all the header section with height 100vh and input php data -->
     <div >
         <nav>
             <a href="#"><img src="css/logo.jpg" alt="Technical Logo" class="logo"></a>
@@ -69,11 +72,13 @@ include('functions.php');
         <h1 >Digi Softwares</h1><br>
         <h2 >All Solutions Available</h2> <br><br>
         <div>
-            <a href="courses.php" class="btn btn-full"> ACCESS SOLUTIONS</a>
+            <a href="#" class="btn btn-full"> ACCESS SOLUTIONS</a>
         </div>
     </div>
 
 </header>
+
+<!-- ABout Section -->
 
 <body>
     <section class="about" id="about">
@@ -288,7 +293,7 @@ include('functions.php');
                         <li class="list-item"><i class="fa-solid fa-check"></i>SEO</li>
                         <li class="list-item"><i class="fa-solid fa-check"></i>Blogs</li>
                     
-                        <li class="list-item"><i class="fa-solid fa-check"></i>3 Courses</li>
+                        <li class="list-item"><i class="fa-solid fa-check"></i>Course</li>
                     </ul>
                 </div>
                 <div>
@@ -320,7 +325,7 @@ include('functions.php');
         </div>
     </section>
 
-    <section class="text-gray-600 body-font relative">
+    <!-- <section class="text-gray-600 body-font relative">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
     <br><br><br><br>
@@ -381,7 +386,7 @@ include('functions.php');
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 

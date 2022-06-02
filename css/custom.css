@@ -32,7 +32,7 @@ html,body{
     position: absolute;
     top: 20%;
     left: 7%;
-    font-size: 110%;
+    font-size: 40px;
     font-weight: 800;
     color: black;
  
@@ -99,13 +99,13 @@ header{
 
 } */
 h1{
-    font-size: 450%;
+    font-size: 150%;
     font-weight: 300;
     text-align: left;
 }
 
 h2{
-    font-size: 250%;
+    font-size: 100%;
     text-align: left;
 
     font-weight: 200;
@@ -154,7 +154,7 @@ h2{
 }
 
 .logout{
-    color:red
+    color:red;
     border-radius: 12px;
     margin: 0 10px 10px;
 }
@@ -453,7 +453,7 @@ margin-top: 10%;
     margin-right: -20%;
     text-align: right;
     align-items: right;
-
+    transform: translateX(140px);
 }
 
 .test-box{

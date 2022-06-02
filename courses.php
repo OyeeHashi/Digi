@@ -48,13 +48,13 @@ $user_data= check_login($con);
         </nav>
 
     </div>
-    <div class="headerBox" >
+    <div  style="margin-top:-130px" class="headerBox" >
         <h1 style="font-size: 70px; font-weight: 300%; margin-top:-5%;">
                 <br><img src="css/udemy.png" alt="udemy" width="150px" height="150px" style="border-radius: 50%;   margin-left:100px; ">
         Paid Courses</h1><br>
         <h2 style="font-size: 30px; font-weight: 300%; ">- Learning Made Accessable</h2> <br><br>
         <div>
-            <a href="#" class="btn btn-full"> ACCESS COURSES</a>
+            <a style="font-size:20px" href="#" class="btn btn-full"> ACCESS COURSES</a>
         </div>
     </div>
 
